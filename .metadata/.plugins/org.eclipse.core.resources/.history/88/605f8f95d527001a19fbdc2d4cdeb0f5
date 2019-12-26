@@ -1,0 +1,7 @@
+package 수열;
+
+public class 합계 {
+public static void main(String[] args) {
+	//1 ~ 100까지 합계를 구하시오.
+}
+}

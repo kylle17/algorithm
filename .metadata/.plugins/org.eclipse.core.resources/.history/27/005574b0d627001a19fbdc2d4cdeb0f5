@@ -1,0 +1,20 @@
+package 수열;
+
+public class 합계 {
+	public static void main(String[] args) {
+		
+		//1 ~ 100까지 합계를 구하시오.
+		long startTime = System.currentTimeMillis(); 
+		
+		int i = 0
+		int sum = 0;
+		while(i<100) {
+			i++;
+			sum += i;
+		}
+		        
+		long endTime = System.currentTimeMillis(); 
+		long runtime = (startTime - endTime)/1000; 
+		System.out.println("소요시간(m) : "+runtime);
+	}
+}
