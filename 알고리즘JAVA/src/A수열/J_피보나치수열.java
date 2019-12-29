@@ -1,6 +1,6 @@
 package A수열;
 
-public class J피보나치수열 {
+public class J_피보나치수열 {
 	public static void main(String[] args) {
 		
 		// 1!+2!+3!+4!+...+10!  합계를 구하시오.

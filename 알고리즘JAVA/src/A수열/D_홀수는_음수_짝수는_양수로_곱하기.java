@@ -1,9 +1,9 @@
 package A수열;
 
-public class E분수더하기빼기 {
+public class D_홀수는_음수_짝수는_양수로_곱하기 {
 	public static void main(String[] args) {
 		
-		//    -(½)+(⅔)- … -(99/100)  합계를 구하시오.
+		// (-1) X 2 X (-3) X ….. X (-99) X 100 , 홀수는 음수, 짝수는 양수 곱한 값을 구하시오.
 		
 		
 		
@@ -11,12 +11,13 @@ public class E분수더하기빼기 {
 		long startTime = System.currentTimeMillis(); 
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {		
 		
-			float i = 0;
+			int i = 0;
 			int sw = -1;
-			float sum = 0;
+			double sum = 1;
 			while(i<100) {
+				i++;
 				sw *= -1;
-				sum += i/(++i)*sw;
+				sum *= i*sw;
 			}
 			if(repeat==1) System.out.println(sum);
 		
@@ -31,14 +32,14 @@ public class E분수더하기빼기 {
 		startTime = System.currentTimeMillis(); 
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {		
 		
-			  float i = 0 ;  float sum = 0; int sw = 0;
-			  while (i<99) {
+			  int i = 0 ;  double sum = 1; int sw = 0;
+			  while (i<100) {
 				  i++;
 				  if(sw==0) {
-					  sum -= i/(i+1);
+					  sum *= -i;
 					  sw = 1;
 				  }else {
-					  sum += i/(i+1);
+					  sum *= i;
 					  sw = 0;
 				  }
 			  }
@@ -55,13 +56,12 @@ public class E분수더하기빼기 {
 		startTime = System.currentTimeMillis(); 
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {		
 		
-			  float i = 0 ;  float sum = 0;
-			  while (true) {
+			  int i = 0 ;  double sum = 1;
+			  while (i<100) {
 				  i++;
-				  sum -= i/(i+1);
-				  if(i>=99) break;
+				  sum *= -i;
 				  i++;
-				  sum += i/(i+1);				  
+				  sum *= i;				  
 			  }
 			  if(repeat==1) System.out.println(sum);
 		
@@ -76,13 +76,13 @@ public class E분수더하기빼기 {
 		startTime = System.currentTimeMillis(); 
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {		
 		
-            float i = 0 ;  float sum = 0; 
-            while(i<99){
+            int i = 0 ;  double sum = 1; 
+            while(i<100){
                   i++;
                   if(i%2==0) {
-                        sum += i/(i+1);
+                        sum *= i;
                   }else {
-                        sum -= i/(i+1);
+                        sum *= -i;
                   }
             }
 			  if(repeat==1) System.out.println(sum);

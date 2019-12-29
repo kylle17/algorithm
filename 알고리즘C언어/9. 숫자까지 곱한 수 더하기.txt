@@ -1,0 +1,26 @@
+문제)
+   1!+2!+3!+4!+...+10!  합계를 구하시오.
+참고) do while문을 사용해 보시오.
+
+
+
+답1)
+#include <stdio.h>
+
+int main(void)
+{
+	int i, j, k;
+	i = 1;
+	j = 1;
+	k = 1;
+	printf(" %d!", i);
+
+	do
+	{
+		i++;
+		j *= i;
+		k += j;
+		printf(" + %d!", i);
+	} while (i < 10);
+	printf(" = %d", k);
+}

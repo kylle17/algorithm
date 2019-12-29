@@ -1,0 +1,27 @@
+문제)
+   1+2+4+7+11+16+22+...  합계를 구하시오.
+참고) do while문을 사용해 보시오.
+
+
+
+답1)
+#include <stdio.h>
+
+int main(void)
+{
+	int i, j, k;
+
+	i = 0;
+	j = 1;
+	k = 1;
+	printf(" + %d", j);
+
+	do
+	{
+		i++;
+		j += i;
+		printf(" + %d", j);
+		k += j;
+	} while (i < 19);
+	printf(" = %d", k);
+}

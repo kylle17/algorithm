@@ -1,9 +1,9 @@
 package A수열;
 
-public class C홀수더하고짝수빼기 {
+public class H_커지는_수_홀수_빼고_짝수_더하기 {
 	public static void main(String[] args) {
 		
-		//1 ~ 100까지 홀수는 더하고 짝수는 뺀 합계를 구하시오.
+		// -1+2-4+7-11+16-22+...  20번쨰 항까지 합계를 구하시오.
 		
 		
 		
@@ -11,13 +11,13 @@ public class C홀수더하고짝수빼기 {
 		long startTime = System.currentTimeMillis(); 
 		for(int repeat=0 ; repeat<10000000 ; repeat++) {		
 		
-			int i = 0;
-			int sw = -1;
-			int sum = 0;
-			while(i<100) {
+			int i = 0;	int j = 1;	int sw = -1;	int sum = -1;
+			
+			while(i<19) {
 				i++;
+				j += i;
 				sw *= -1;
-				sum += i*sw;
+				sum += j*sw;
 			}
 			if(repeat==1) System.out.println(sum);
 		
@@ -32,14 +32,16 @@ public class C홀수더하고짝수빼기 {
 		startTime = System.currentTimeMillis(); 
 		for(int repeat=0 ; repeat<10000000 ; repeat++) {		
 		
-			  int i = 0 ;  int sum = 0; int sw = 0;
-			  while (i<100) {
+			  int i = 0 ;  int j = 1; int sum = -1; int sw = 0;
+			  
+			  while (i<19) {
 				  i++;
+				  j+= i;
 				  if(sw==0) {
-					  sum += i;
+					  sum += j;
 					  sw = 1;
 				  }else {
-					  sum -= i;
+					  sum -= j;
 					  sw = 0;
 				  }
 			  }
@@ -56,12 +58,16 @@ public class C홀수더하고짝수빼기 {
 		startTime = System.currentTimeMillis(); 
 		for(int repeat=0 ; repeat<10000000 ; repeat++) {		
 		
-			  int i = 0 ;  int sum = 0;
-			  while (i<100) {
+			  int i = 0 ;  int j = 1 ;	int sum = -1;
+			  
+			  while (true) {
 				  i++;
-				  sum += i;
+				  j += i;
+				  sum += j;
+				  if(i>=19) break;
 				  i++;
-				  sum -= i;				  
+				  j += i;
+				  sum -= j;				  
 			  }
 			  if(repeat==1) System.out.println(sum);
 		

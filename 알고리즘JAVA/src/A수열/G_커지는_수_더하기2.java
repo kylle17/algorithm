@@ -1,9 +1,9 @@
 package A수열;
 
-public class F커지는수더하기 {
+public class G_커지는_수_더하기2 {
 	public static void main(String[] args) {
 		
-		//    1+2+4+7+11+16+22+... 20번째 항까지 합계를 구하시오.
+		//    1+3+6+10+15+21+28+... 20번째 항까지 합계를 구하시오.
 
 		
 		
@@ -13,9 +13,9 @@ public class F커지는수더하기 {
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {		
 		
 			int i = 0;
-			int j = 1;
-			int sum = 1;
-			while(i<19) {
+			int j = 0;
+			int sum = 0;
+			while(i<20) {
 				i++;
 				j += i;
 				sum += j;

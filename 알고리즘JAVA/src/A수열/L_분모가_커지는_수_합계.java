@@ -1,6 +1,6 @@
 package A수열;
 
-public class L분모가커지는수합계 {
+public class L_분모가_커지는_수_합계 {
 	public static void main(String[] args) {
 		
 		// 1 + 1/2 + 1/3 + 1/4 + ... + 1/10을 구하시오.

@@ -1,6 +1,6 @@
 package A수열;
 
-public class K커지는수와작아지는수더하기 {
+public class K_커지는_수와_작아지는_수_곱해서_더하기 {
 	public static void main(String[] args) {
 		
 		// (77 x 1) + (76 x 2) + (75 x 3) + ... + (2 x 76) + (1 x 77)를 구하시오. 

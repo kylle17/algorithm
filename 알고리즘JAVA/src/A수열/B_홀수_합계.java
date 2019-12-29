@@ -1,6 +1,6 @@
 package A수열;
 
-public class B홀수합계 {
+public class B_홀수_합계 {
 	public static void main(String[] args) {
 		
 		//1 ~ 100까지 홀수 합계를 구하시오.
