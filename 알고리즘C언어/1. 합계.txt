@@ -1,0 +1,26 @@
+문제)
+1+2+3+ … +100까지 합계를 구하시오.
+참고) do while문을 사용해 보시오.
+
+
+
+답)
+#include <stdio.h>
+
+int main(void)
+{
+	int i = 0; int sum = 0;
+	do
+	{
+		i++;
+		sum += i;
+		if (i < 100) {
+			printf("%d + ", i);
+		}
+		else {
+			printf("%d = ", i);
+		}
+	} while (i < 100);
+
+	printf("%d", sum);
+}

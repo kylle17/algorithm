@@ -1,0 +1,51 @@
+문제)
+1-2+3-4 … +99-100까지 홀수는 더하고 짝수는 빼서 합계를 구하시오.
+참고) do while문을 사용해 보시오.
+
+
+
+답1) = 스위치 사용
+#include<stdio.h>
+
+int main(void) {
+	int i = 0; int sum = 0; int sw = 0;
+
+	do {
+
+		i++;
+		if (sw == 0) {
+			sum += i;
+			sw = 1;
+			printf(" + %d ", i);
+		}
+		else {
+			sum -= i;
+			sw = 0;
+			printf("- %d ", i);
+		}
+
+	} while (i < 100);
+	printf("= %d\n", sum);
+}
+
+
+
+
+답2) 순서에 의한 반복
+#include<stdio.h>
+
+int main(void) {
+	int i = 0; int sum = 0; 
+
+	do {
+
+		i++;
+		sum += i;
+		printf("+ %d ", i);
+		i++;
+		sum -= i;
+		printf("- %d ", i);
+
+	} while (i < 100);
+	printf("= %d\n", sum);
+}
