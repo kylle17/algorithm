@@ -2,7 +2,7 @@ package B수학;
 
 import java.util.Scanner;
 
-public class A소수판별 {
+public class A_소수판별_나누어떨어지지않을떄 {
 public static void main(String[] args) {
 		
 		/*
@@ -16,6 +16,7 @@ public static void main(String[] args) {
 		int n; String resultText = null;
 		Scanner sc = new Scanner(System.in);
 		n = sc.nextInt();
+		sc.close();
 		System.out.println(n);
 	
 		long startTime = System.currentTimeMillis(); 		
@@ -25,11 +26,10 @@ public static void main(String[] args) {
 			while(true) {				
 				i++;
 				if(n%i==0) {
-					resultText = n+"는 소수가 아닙니다.";
+					resultText = n+"는 소수가 아닙니다.";  // String자료형에 int자료형을 넣는것은 엄청 비효율 적인 코드다. 
 					break;
 				}
-				if(i>=n-1) {  //마지막에 한번만 확인하게 하는 것이 좋다. 여러번 반복해서 확인하면 비효율적이다.
-					          // n-1을 넣는 것 보다는 변수에 계산해 넣고 변수를 사용하는게 좋다. 매번 계산해서 확인하면 비효율적이다. 
+				if(i>=n-1) {   
 					resultText = n+"는 소수 입니다.";		
 					break;
 				}
