@@ -2,7 +2,7 @@ package B수학;
 
 import java.util.Scanner;
 
-public class B_소수판별_나누어떨어질때 {
+public class C_소수판별_제곱근이용하기 {
 public static void main(String[] args) {
 		
 		/*
@@ -24,16 +24,16 @@ public static void main(String[] args) {
 			
 			int i = 2; 
 			while(true) {				
-				if(i*i <= n) { //i가 변화할 떄 마다 재곱하는 연산을 해야 하기 때문에 sqrt를 사용하는 것 보다 비효율 적이다. 
-					if(n%i==0) {
-						resultText = "소수 아님";
+				if(n%i==0) {
+					if(n==i) {
+						resultText = "소수";
 						break;
 					}else {
-						i++;
-					}					
+						resultText = "소수 아님";
+						break;
+					}
 				}else {
-					resultText = "소수";
-					break;
+					i++;
 				}
 			}		
 		}        
@@ -47,20 +47,14 @@ public static void main(String[] args) {
 		startTime = System.currentTimeMillis(); 
 		for(int repeat=0 ; repeat<10000000 ; repeat++) {		
 		
-			int i = 2; 
-			while(true) {				
-				if(i <= Math.sqrt(n)) {
-					if(n%i==0) {
-						resultText = "소수 아님";
-						break;
-					}else {
-						i++;
-					}					
-				}else {
-					resultText = "소수";
-					break;
-				}
-			}		
+			int i=2;
+			while(n%i!=0)
+				i++;
+			if(n==i) {
+				resultText = "소수";
+			}else {
+				resultText = "소수 아님";
+			}
 			
 		
 		}        

@@ -8568,3 +8568,15 @@ java.io.IOException: http://www.objectaid.com/download is not a valid repository
 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
 	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-31 21:21:03.855
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.lyFRTnkv
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-31 21:21:03.856
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.lyFRTnkv
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-31 21:21:03.857
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-12-31 21:21:03.858
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.lyFRTnkv => OK
