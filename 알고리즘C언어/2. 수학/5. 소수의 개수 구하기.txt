@@ -1,0 +1,81 @@
+문제)
+   배열 A[99]에 2~100 사이의 정수를 기억시킨 후 이 배열을 이용하여 소수의 개수를 구하시오.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답1) 내가 적은 답. 
+
+#include<stdio.h>
+#include<math.h>
+
+int main(void)
+{
+	int A[99]; int result=0;
+	for (int i = 0; i < 99; i++) {
+		A[i] = i + 2;
+	}
+
+	for (int i = 0; i < 99; i++) {
+		int j = 2;
+		while (1) {
+			if (j <= sqrt(A[i])) {
+				if (A[i] % j == 0) {
+					break;
+				}
+				else {
+					j++;
+				}
+			}
+			else {
+				printf(" %d , ",A[i]);
+				result += 1;
+				break;
+			}
+		}
+	}
+
+	printf("%d", result);
+
+}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답2) 책 답
+
+#include<stdio.h>
+
+#include<stdio.h>
+
+int main(void)
+{
+	int k, i, j, m;
+	int a[99];
+
+	k = 1;
+	do {
+		k++;
+		a[k - 2] = k;
+	} while (k<100);
+
+	i = -1, j = 0;
+	while (1) {
+		i++;
+		if (i > 98) {
+			printf("%d", j);
+			break;
+		}
+		if (a[i] == 0)
+			continue;
+		j++;
+		m = i;
+		while (1) {
+			m += a[i];
+			if (m > 98)
+				break;
+			a[m] = 0;
+
+		}
+
+	}
+
+}
