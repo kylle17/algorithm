@@ -18,8 +18,8 @@ public static void main(String[] args) {
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {	
 			
 
-
-			int A[] = new int[99] ; int result=0;
+			
+			int A[] = new int[99]; int result=0;
 			for (int i = 0; i < 99; i++) {
 				A[i] = i + 2;
 			}
@@ -55,6 +55,8 @@ public static void main(String[] args) {
 		startTime = System.currentTimeMillis(); 
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {		
 		
+
+
 			int k, i, j, m;
 			int a[] = new int[99];
 
@@ -84,7 +86,6 @@ public static void main(String[] args) {
 
 			}
 			resultText = Integer.toString(j);
-			
 		
 		}        
 		endTime = System.currentTimeMillis(); 
