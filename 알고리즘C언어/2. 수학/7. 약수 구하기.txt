@@ -1,0 +1,59 @@
+문제)
+   정수를 입력 받아 약수를 구해 출력하는 순서도를 작성하시오.  
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답1) 내가 적은 답. 
+
+#include<stdio.h>
+
+int main(void)
+{
+	int a; int cnt=0;  int result[100];
+	scanf_s("%d", &a);
+
+	for (int i=1; i <= a; i++) {
+		if (a%i == 0) {
+			result[cnt] = i;
+			cnt++;
+		}
+	}
+
+	for (int i = 1; i < cnt; i++) {
+		printf(" %d ", result[i]);
+	}
+}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답2) 책 답
+
+#include<stdio.h>
+
+int main()
+{
+	int b, mok, nmg , i;
+	int a[100];
+
+	scanf_s("%d", &b);
+	int c = 0, d = -1;
+
+	while (1) {
+		c++;
+		if (c <= b) {
+			mok = b / c;
+			nmg = b - c * mok;
+			if (nmg == 0) {
+				d++;
+				a[d] = c;
+			}
+		}
+		else {
+			printf("%d", b);
+			for (i = 0; i <= d; i++) {
+				printf(" %d ", a[i]);
+			}
+			break;
+		}
+	}
+}
