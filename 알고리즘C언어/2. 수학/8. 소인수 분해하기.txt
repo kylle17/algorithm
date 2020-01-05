@@ -1,0 +1,96 @@
+문제)
+   정수를 입력 받아 소인수를 구해 출력하 시오. 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답1) 내가 적은 답. 
+
+#include<stdio.h>
+#include<math.h>
+
+int main(void)
+{
+	int a, i, cnt,  mok, judge, result[100];
+	scanf_s("%d", &a);
+
+
+	cnt = 0;
+	mok = a;
+	judge = 0;
+	while (1) {
+		i = 2;
+		while (1) {
+			if (i <= sqrt(mok)) {
+				if (mok%i == 0) {
+					break;
+				}
+				else {
+					i++;
+				}
+			}
+			else {
+				result[cnt] = mok;
+				judge = 1;
+				break;
+			}
+		}
+
+		if (judge == 1) {
+			break;
+		}
+
+		for (int j = 2; j <= sqrt(mok); j++) {
+			if (mok%j == 0) {
+				mok /= j;
+				result[cnt] = j;
+				cnt++;
+				break;
+			}
+		}
+	}
+
+	for (int i = 0; i <= cnt; i++) {
+		printf(" %d ", result[i]);
+	}
+}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답2) 책 답
+
+#include<stdio.h>
+#include<math.h>
+
+int main(void)
+{
+	int b, c, d, e, mok, nmg;
+	int a[100];
+
+	scanf_s("%d", &b);
+	c = -1;
+
+	while (1) {
+		d = 2;
+		e = (int)sqrt(b);
+
+		while (1) {
+			if (d > e) {
+				d = b;
+				break;
+			}
+			mok = b / d;
+			nmg = b - mok * d;
+			if (nmg == 0)
+				break;
+			else
+				d++;
+		}
+		c++;
+		a[c] = d;
+		if (b == d)
+			break;
+		b = mok;
+		}
+	for (int i = 0; i <= c; i++)
+		printf(" %d ", a[i]);
+}
