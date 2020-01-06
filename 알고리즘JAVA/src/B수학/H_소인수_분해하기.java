@@ -6,52 +6,33 @@ public class H_소인수_분해하기 {
 	public static void main(String[] args) {
 		
 		/*
-		 * 정수를 입력 받아 소인수를 구해 출력하 시오. 
+		 * 10진수를 입력 받아 2진수로 변환하시오. 
+		 * 단, 1000 이하의 숫자를 입력받는다.
 		 */
 		
 				
 		//답1번  = 내가 푼것
-		String resultText = null;
-		int n, i,cnt, mok, judge;	int result[]= new int[100];
+		int n, cnt, mok, nmg;	int result[]= new int[100];
 		Scanner sc = new Scanner(System.in);
 		n = sc.nextInt();
-		cnt = 0;
-		mok = n;
-		judge = 0;
+		cnt = -1;
 	
 		long startTime = System.currentTimeMillis(); 		
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {	
 			
-
+			mok = n;
+			cnt = -1;
 			while (true) {
-				i = 2;
-				while (true) {
-					if (i <= Math.sqrt(mok)) {
-						if (mok%i == 0) {
-							break;
-						}
-						else {
-							i++;
-						}
-					}
-					else {
-						result[cnt] = mok;
-						judge = 1;
-						break;
-					}
-				}
-
-				if (judge == 1) {
+				if (mok < 2) {
+					cnt++;
+					result[cnt] = mok;
 					break;
 				}
-
-				for (int j = 2; j <= Math.sqrt(mok); j++) {
-					if (mok%j == 0) {
-						mok /= j;
-						result[cnt] = j;
-						cnt++;
-						break;
-					}
+				else {
+					cnt++;
+					nmg = mok % 2;
+					mok /= 2;
+					result[cnt] = nmg;
 				}
 			}
 
@@ -61,50 +42,41 @@ public class H_소인수_분해하기 {
 		long runtime = (endTime - startTime); 
 		System.out.println("소요시간(m) : "+runtime/1000.0);
 		System.out.println( n );
-		for(i=0 ; i<=cnt ; i++) {
-			System.out.print("\t"+result[i]);
+		for(int i=cnt ; i>=0 ; i--) {
+			System.out.print(result[i]);
 		}
 		
 		//답2번  = 책답
 		
-		int c, d, e,nmg;
+		int b, bb, c, i;
 		int a[] = new int[100];		
+		b = n;
+		bb = b;		
+		c = -1;
 		
 		startTime = System.currentTimeMillis(); 
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {		
-			
-
+	
+			b = n;
+			bb = b;
 			c = -1;
-			while (true) {
-				d = 2;
-				e = (int)Math.sqrt(n);
-
-				while (true) {
-					if (d > e) {
-						d = n;
-						break;
-					}
-					mok = n / d;
-					nmg = n - mok * d;
-					if (nmg == 0)
-						break;
-					else
-						d++;
-				}
+			do {
 				c++;
-				a[c] = d;
-				if (n == d)
-					break;
-				n = mok;
-				}
+				mok = b / 2;
+				nmg = b - mok * 2;
+				a[c] = nmg;
+				b = mok;
+			} while (mok!=0);
+
+			
 		
 		}        
 		endTime = System.currentTimeMillis(); 
 		runtime = (endTime - startTime); 
 		System.out.println("\n소요시간(m) : "+runtime/1000.0);
-		System.out.println( n );
-		for (i = 0; i <= cnt; i++) {
-			System.out.print("\t"+ a[i] );
+		System.out.println(bb);
+		for (i = c; i >= 0; i--) {
+			System.out.print(a[i]);
 		}
 		
 	}

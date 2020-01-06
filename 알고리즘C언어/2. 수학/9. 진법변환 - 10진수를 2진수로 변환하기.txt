@@ -1,0 +1,62 @@
+문제)
+   10진수를 입력 받아 2진수로 변환하시오. 
+    단, 1000 이하의 숫자를 입력받는다.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답1) 내가 적은 답. 
+
+#include<stdio.h>
+
+int main(void) {
+	int n, cnt, mok, nmg, result[10];
+	scanf_s("%d", &n);
+
+
+	mok = n;
+	cnt = -1;
+	while (1) {
+		if (mok < 2) {
+			cnt++;
+			result[cnt] = mok;
+			break;
+		}
+		else {
+			cnt++;
+			nmg = mok % 2;
+			mok /= 2;
+			result[cnt] = nmg;
+		}
+	}
+	for (int i = cnt; i >= 0; i--) {
+		printf("%d", result[i]);
+	}
+}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답2) 책 답
+
+#include<stdio.h>
+
+int main(void) 
+{
+	int b, bb, c, mok, nmg, i;
+	int a[10];
+
+	scanf_s("%d", &b);
+	bb = b;
+	c = -1;
+
+	do {
+		c++;
+		mok = b / 2;
+		nmg = b - mok * 2;
+		a[c] = nmg;
+		b = mok;
+	} while (mok!=0);
+	printf(" %d ", bb);
+	for (i = c; i >= 0; i--) {
+		printf("%d", a[i]);
+	}
+}
