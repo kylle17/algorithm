@@ -12,65 +12,76 @@ public class J_진법변환_10진수를_여러진수로 {
 		
 				
 		//답1번  = 내가 푼것
-		int n, cnt, mok, nmg;	int result[]= new int[100];
+		int n, b, e, mok, nmg, cnt;
+		char sign[] = { '0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F' };
+		char result[] = new char[10];
 		Scanner sc = new Scanner(System.in);
 		n = sc.nextInt();
+		b = sc.nextInt();
+		e = 1;
+		mok = n;
 		cnt = -1;
 	
 		long startTime = System.currentTimeMillis(); 		
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {	
 			
-			int b, c, d, e, f;
-			char a[16] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
 
-			scanf_s("%d %d", &b, &c);
-			d = 1;
-			while (d<=c) {
-				d *= b;
+			e = 1;
+			mok = n;
+			cnt = -1;
+			while (e <= n) {
+				e *= b;
 			}
-			while (1) {
-				if (d > 1)
-					d /= b;
-				e = c / d;
-				f = c - e * d;
-				System.out.println(a[e]);
 
-				if (d != 1)
-					c = f;
-				else
+			while (true) {
+				e /= b;
+				nmg = mok % e;
+				mok /= e;
+				cnt++;
+				result[cnt] = sign[mok];
+				mok = nmg;
+				if (e == 1) {
 					break;
+				}
 			}
+
+
 			
 		}        
 		long endTime = System.currentTimeMillis(); 
 		long runtime = (endTime - startTime); 
 		System.out.println("소요시간(m) : "+runtime/1000.0);
 		System.out.println( n );
-		for(int i=cnt ; i>=0 ; i--) {
+		for(int i = 0; i <= cnt; i++) {
 			System.out.print(result[i]);
 		}
 		
 		//답2번  = 책답
 		
-		int b, bb, c, i;
-		int a[] = new int[100];		
-		b = n;
-		bb = b;		
-		c = -1;
+		int c, d, f;
+		char a[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};	
+		c = n;
 		
 		startTime = System.currentTimeMillis(); 
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {		
 	
-			b = n;
-			bb = b;
-			c = -1;
-			do {
-				c++;
-				mok = b / 2;
-				nmg = b - mok * 2;
-				a[c] = nmg;
-				b = mok;
-			} while (mok!=0);
+			c = n;
+			d = 1;
+			while (d<=c) {
+				d *= b;
+			}
+			while (true) {
+				if (d > 1)
+					d /= b;
+				e = c / d;
+				f = c - e * d;
+				
+
+				if (d != 1)
+					c = f;
+				else
+					break;
+			}
 
 			
 		
@@ -78,10 +89,8 @@ public class J_진법변환_10진수를_여러진수로 {
 		endTime = System.currentTimeMillis(); 
 		runtime = (endTime - startTime); 
 		System.out.println("\n소요시간(m) : "+runtime/1000.0);
-		System.out.println(bb);
-		for (i = c; i >= 0; i--) {
-			System.out.print(a[i]);
-		}
+		System.out.println(n);
+
 		
 	}
 }
