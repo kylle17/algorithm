@@ -1,4 +1,4 @@
-package BC_최대값_최소값;
+package BD_최대값_최소값;
 
 import java.util.Scanner;
 
