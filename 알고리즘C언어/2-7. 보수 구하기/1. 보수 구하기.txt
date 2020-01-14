@@ -1,0 +1,84 @@
+문제)
+     0 또는 1로 입력되는 다섯 개의 숫자를 배열에 입력받아 
+     1의 보수와 2의 보수를 구하시오. 
+     
+     보수란?
+      보충해주는 수
+      10에 대한 3의 보수란 , 즉 7을 말한다.
+      일반적으로 에 대한 의 보수는 을 뜻하는데, 
+      보수는 에서 을 만들기 위해 보충해야 하는 수 을 가리키는 용어다.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답1) 내가 적은 답. 
+#include<stdio.h>
+#include<math.h>
+#include <stdlib.h>
+
+int main(void) {
+	int a[5], resultA[5], resultB[5];
+
+	for (int i = 0; i < 5; i++) {
+		scanf_s("%d", &a[i]);
+		resultA[i] = 1;
+		resultB[i] = 1;
+	}
+	
+	for (int i = 0; i < 5; i++) {
+		resultA[i] -= a[i];
+		resultB[i] -= a[i];
+	}
+	for (int i = 0; i < 5; i++) {
+		if (resultB[4 - i] == 1) {
+			resultB[4 - i] = 0;
+		}
+		else {
+			resultB[4 - i] += 1;
+			break;
+		}
+	}
+	
+	printf("\n1의보수: ");
+	for (int i = 0; i < 5; i++) {
+		printf("%d", resultA[i]);
+	}
+	printf("\n2의보수: ");
+	for (int i = 0; i < 5; i++) {
+		printf("%d", resultB[i]);
+	}
+
+
+
+}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답2) 책 답
+
+#include<stdio.h>
+
+int main(void) {
+	int a[5], b1[5], b2[5];
+	int i = -1, c = 1;
+
+	do {
+		i++;
+		scanf_s("%d", &a[i]);
+		b1[i] = 1 - a[i];
+	} while (i < 4);
+
+	do {
+		b2[i] = b1[i] + c;
+		b2[i] = b2[i] % 2;
+		c = b1[i] * c;
+		i--;
+	} while (i >= 0);
+
+	for (int k = 0; k < 5; k++)
+		printf("%d", a[k]);
+	for (int k = 0; k < 5; k++)
+		printf("%d", b1[k]);
+	for (int k = 0; k < 5; k++)
+		printf("%d", b2[k]);
+}
+
