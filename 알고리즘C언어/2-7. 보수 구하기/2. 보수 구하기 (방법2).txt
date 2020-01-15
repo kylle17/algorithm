@@ -1,0 +1,65 @@
+문제)
+     2의 보수 쉽게 구하기. 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답1) 내가 적은 답. 
+#include<stdio.h>
+
+int main(void) {
+	int a[5] = { 0,1,0,1,0 }, result[5];
+	int sw = 0;
+
+	for (int i = 4; i >= 0; i--) {
+		if (sw == 0) {
+			if (a[i] == 1) {
+				result[i] = a[i];
+				sw = 1;
+			}else{
+				result[i] = a[i];
+			}
+		}
+		else {
+			if (a[i] == 0) {
+				result[i] = 1;
+			}
+			else {
+				result[i] = 0;
+			}
+		}
+	}
+
+	for (int i = 0; i < 5; i++) {
+		printf("%d", result[i]);
+	}
+
+}
+
+
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답2) 책 답
+
+#include<stdio.h>
+
+int main(void) {
+	int i, j;
+	int a[5] = { 0,1,0,1,0 }, b[5];
+
+	for (i = 4; i >= 0; i--) {
+		if (a[i] == 1)
+			break;
+		b[i] = a[i];
+	}
+	for (j = i ; j >= 0; j--)
+		b[j] = 1 - a[j];
+	for (int k = 0; k < 5; k++)
+		printf("%d", a[k]);
+	printf("  ");
+	for (int k = 0; k < 5; k++)
+		printf("%d", b[k]);
+}
+
