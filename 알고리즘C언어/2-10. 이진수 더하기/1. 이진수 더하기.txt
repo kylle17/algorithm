@@ -1,0 +1,85 @@
+문제)
+     배열 X[10]와 Y[10]에 이진수가 각각 입력되어 있다. 
+     두 이진수의 덧셈 결과를 이진수 형태로 출력하는시오.
+     단, 덧셈의 결과 MSB(최상위 비트)에서 올림수가 발생하면 "OVERFLOW"라고 출력한다. 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답1) 내가 적은 답. 
+#include<stdio.h>
+
+int main(void) {
+	int X[10], Y[10], result[10] = { 0 }, plus;
+	plus = 0;
+	printf("숫자를 입력하세요\n");
+	for (int i = 0; i < 10; i++) {
+		scanf_s("%d", &X[i]);
+	}
+	printf("숫자를 입력하세요\n");
+	for (int i = 0; i < 10; i++) {
+		scanf_s("%d", &Y[i]);
+	}
+
+	for (int i = 9; i >= 0 ; i--) {
+		result[i] = X[i] + Y[i] + plus;
+		plus = result[i] / 2;
+		result[i] %= 2;
+	}
+	if (plus == 1) {
+		printf("OVERFLOW");		
+	}
+	else {
+		for (int i = 0; i < 10; i++) {
+			printf("%d", result[i]);
+		}
+	}
+
+}
+
+
+
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답2) 책 답
+
+#include<stdio.h>
+
+int main(void) {
+	int i, z, c, j;
+	int x[10], y[10], a[10] = {0};
+
+	printf("숫자를 입력하세요");
+	for (i = 0; i <= 9; i++)
+		scanf_s("%d", &x[i]);
+	printf("숫자를 입력하세요");
+	for (i = 0; i <= 9; i++)
+		scanf_s("%d", &y[i]);
+
+
+	z = 0, c = 0, j = 9;
+
+	do {
+		z = x[j] + y[j] + c;
+		if (z < 2) {
+			c = 0;
+			a[j] = z;
+		}
+		else {
+			c = 1;
+			a[j] = z - 2;
+		}
+		j--;
+	} while (j >= 0);
+	if (c == 0) {
+		do {
+			j++;
+			printf("%d", a[j]);
+		} while (j < 9);
+	}
+	else {
+		printf("OVERFLOW");
+	}
+}
