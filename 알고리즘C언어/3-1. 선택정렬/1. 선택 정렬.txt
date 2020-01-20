@@ -1,0 +1,68 @@
+문제)
+     10개의 수치 자료를 입력 받아 배열에 저장한 후 저장된 자료를 오름차순으로 정렬하시오.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답1) 내가 적은 답. 
+#include<stdio.h>
+
+int main(void) {
+	int a[10] , tmp;
+
+	for (int i = 0; i < 10; i++) {
+		scanf_s("%d", &a[i]);
+	}
+
+	for (int i = 0; i < 9; i++) {
+		for (int j = i+1; j < 10; j++) {
+			if (a[i] > a[j]) {
+				tmp = a[i];
+				a[i] = a[j];
+				a[j] = tmp;
+			}
+		}
+	}
+
+	for (int i = 0; i < 10; i++) {
+		printf("  %d  ", a[i]);
+	}
+}
+
+
+
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답2) 책 답
+
+#include<stdio.h>
+
+int main(void) {
+	int m, i, j, k, x;
+	int data[10];
+	m = -1;
+
+	do {
+		m++;
+		scanf_s("%d", &data[m]);
+	} while (m<9);
+
+	i = -1;
+	do {
+		i++;
+		j = i;
+		do {
+			j++;
+			if (data[i] > data[j]) {
+				k = data[i];
+				data[i] = data[j];
+				data[j] = k;
+			}
+		} while (j < 9);
+	} while (i < 8);
+	for (x = 0; x <= 9; x++) {
+		printf(" %d ", data[x]);
+	}
+}

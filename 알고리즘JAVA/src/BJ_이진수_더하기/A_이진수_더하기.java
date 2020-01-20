@@ -6,8 +6,7 @@ public class A_이진수_더하기 {
 	public static void main(String[] args) {
 		
 		/*    
-		 *           0 또는 1로 입력되는 다섯 개의 숫자를 배열에 입력 받아
-		 *           그레이 코드 또는 이진수로 변환하시오. 
+		 *            
 		 */
 		
 		
