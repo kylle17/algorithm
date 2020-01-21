@@ -1,0 +1,66 @@
+문제)
+     배열에 기억된 10건의 자료를 오름차순으로 정렬하시오. 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답1) 내가 적은 답. 
+#include<stdio.h>
+
+int main(void) {
+	int a[10], tmp;
+
+	for (int i = 0; i < 10; i++) {
+		scanf_s("%d", &a[i]);
+	}
+
+	for (int i = 0; i < 10; i++) {
+		for (int j = 0; j < 9 - i;j++) {
+			if (a[j] > a[j + 1]) {
+				tmp = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = tmp;
+			}
+		}
+	}
+	for (int i = 0; i < 10; i++) {
+		printf("%d", a[i]);
+	}
+}
+
+
+
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답2) 책 답
+
+#include<stdio.h>
+
+int main(void) {
+	int n, i, j, k;
+	int data[10];
+	n = -1;
+
+	do {
+		n++;
+		scanf_s("%d", &data[n]);
+	} while (n < 9);
+	i = -1;
+	do {
+		i++;
+		j = -1;
+		do {
+			j++;
+			if (data[j] > data[j + 1]) {
+				k = data[j];
+				data[j] = data[j + 1];
+				data[j + 1] = k;
+			}
+		} while (j<8-i);
+	} while (i < 8);
+	for (int x = 0; x <= 9; x++) {
+		printf("%d", data[x]);
+	}
+}
