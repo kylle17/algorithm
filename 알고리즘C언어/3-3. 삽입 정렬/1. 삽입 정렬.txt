@@ -1,0 +1,74 @@
+문제)
+     10개의 수치 자료를 입력 받아 배열에 저장한 후
+     저장된 자료를 오름차순으로 정렬하시오.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답1) 내가 적은 답. 
+#include<stdio.h>
+
+int main(void) {
+	int a[10], tmp, j, cnt;
+	cnt = 0;
+
+	for (int i = 0; i < 10; i++) {
+		scanf_s("%d", &a[i]);
+	}
+
+	for (int i = 1; i < 10; i++) {
+		tmp = a[i];
+		j = 0;
+		for (j = i - 1; j >= 0; j--) {
+			if (tmp < a[j]) {
+				a[j + 1] = a[j];
+				cnt++;
+			}
+			else {
+				break;
+			}
+		}
+		a[j + 1] = tmp;
+	}
+	printf("횟수: %d\n", cnt);
+	for (int i = 0; i < 10; i++) {
+		printf("%d", a[i]);
+	}
+}
+
+
+
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답2) 책 답
+
+#include<stdio.h>
+
+int main(void) {
+	int j, i, k, key, cnt;
+	int a[10];
+	j = -1;
+	cnt = 0;
+
+	do {
+		j++;
+		scanf_s("%d", &a[j]);
+	} while (j < 9);
+	for (i = 1; i <= 9; i++) {
+		key = a[i];
+		for (k = i - 1; k >= 0; k--) {
+			if (a[k] > key) {
+				a[k + 1] = a[k];
+				cnt++;
+			}
+			else
+				break;
+		}
+		a[k + 1] = key;
+	}
+	printf("횟수: %d\n", cnt);
+	for (i = 0; i <= 9; i++)
+		printf("%d", a[i]);
+}
