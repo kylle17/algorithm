@@ -1,0 +1,73 @@
+문제)
+     10명의 학생의 국어, 수학 점수를 각각 입력받아 총점을 계산한 후 
+     총점 기준 내림차순으로 순위를 출력하시오.
+     단, 동점은 동석차로 하고 총점이 0인경우는 출력하지 않는다. 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답1) 내가 적은 답. 
+#include<stdio.h>
+
+int main(void) {
+	int kor[10], math[10], total[10];
+	int i , j , k , rank;
+
+	for (i = 0; i < 10; i++) {
+		scanf_s("%d", &kor[i]);
+	}
+	for (i = 0; i < 10; i++) {
+		scanf_s("%d", &math[i]);
+	}
+
+	for (i = 0; i < 10; i++) {
+		total[i] = kor[i] + math[i];
+	}
+
+	for (i = 0; i < 10; i++) {
+		rank = 1;
+		for ( j= 0; j < 10; j++) {
+			if (total[i] < total[j]) {
+				rank++;
+			}
+		}
+		if(total!=0){
+			printf("영어:%d 수학:%d 총점:%d 등수:%d\n", kor[i], math[i], total[i] , rank);	
+		}
+	}
+}
+
+
+
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답2) 책 답
+
+
+#include<stdio.h>
+
+int main(void) {
+	int i, j, r;
+	int kuk[10], mat[10], hap[10];
+
+	i = -1;
+
+	do {
+		i++;
+		scanf_s("%d  %d", &kuk[i], &mat[i]);
+		hap[i] = kuk[i] + mat[i];
+	} while (i < 9);
+
+	for (i = 0; i <= 9; i++) {
+		if (hap[i] != 0) {
+			r = 1;
+			for (j = 0; j <= 9; j++) {
+				if (hap[i] < hap[j])
+					r++;
+			}
+			printf("%d번  국어:%d 수학:%d 총점:%d 등수:%d\n", i + 1, kuk[i], mat[i], hap[i], r);
+		}
+	}
+}
