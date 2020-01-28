@@ -1,0 +1,84 @@
+문제)
+     키보드로 입력 받은 번호에 대한 점수를 DATA배열에서 찾아 출력하시오.
+     단, DATA[2][10] 배열에는 번호와 점수가 들어 있다고 가정하고,
+     찾는 자료가 없을 경우 자료와 함께 "NOT FOUND"를 출력하고 끝낸다. 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답1) 내가 적은 답. 
+#include<stdio.h>
+
+int main(void) {
+	int data[2][10]={
+		{1,2,3,4,5,6,7,8,9,10},
+		{100,66,25,88,90,65,87,86,58,99}
+	};
+	int a, n,start, end;
+	   
+	scanf_s("%d", &a);
+
+
+	start = 0;
+	end = 9;
+	while (1) {
+		if (start <= end) {
+			n = (start + end) / 2;
+			if (a < data[0][n]) {
+				end = n - 1;
+			}
+			else if(a > data[0][n]) {
+				start = n + 1;
+			}
+			else {
+				printf("%d", data[1][n]);
+				break;
+			}
+		}
+		else {
+			printf("%d Not Found",a);
+			break;
+		}
+
+	}
+	
+}
+
+
+
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답2) 책 답
+#include<stdio.h>
+
+int main(void) {
+	int j, L, h, m;
+	int data[2][10] = {
+		{1,2,3,4,5,6,7,8,9,10},
+		{100,66,25,88,90,65,87,86,58,99}
+	};
+
+	scanf_s("%d", &j);
+	L = 0;
+	h = 9;
+	while (1) {
+		if (L <= h) {
+			m = (L + h) / 2;
+			if (j == data[0][m]) {
+				printf("%d %d\n", j, data[1][m]);
+				break;
+			}
+			if (j < data[0][m])
+				h = m - 1;
+			else
+				L = m + 1;
+		}
+		else {
+			printf("%d Not Found", j);
+			break;
+		}
+
+	}
+}
