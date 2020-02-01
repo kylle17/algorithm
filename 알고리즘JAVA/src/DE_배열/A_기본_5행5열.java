@@ -1,6 +1,6 @@
 package DE_배열;
 
-public class A_기본_5행_5열 {
+public class A_기본_5행5열 {
 	public static void main(String[] args) {
 		int i, j, k;
 		int a[][] = new int[5][5];

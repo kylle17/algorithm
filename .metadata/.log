@@ -7792,3 +7792,119 @@ Caused by: java.lang.NullPointerException
 	at java.security.AccessController.doPrivileged(Native Method)
 	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:808)
 	... 92 more
+!SESSION 2020-02-01 21:44:24.400 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_201
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.core 1 0 2020-02-01 21:44:33.057
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2020-02-01 21:44:36.111
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2020-02-01 21:44:36.112
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5304cee,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@68b59e2f,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jface.text 2 0 2020-02-01 21:44:45.616
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:44:52.235
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:44:52.238
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@385dae6a[org.springframework.tooling.boot.ls:1.9.0.201907120625(id=1500)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:44:52.257
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:44:52.529
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-02-01 21:44:58.651
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\USER'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 2 2 2020-02-01 21:45:06.931
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.868
+!MESSAGE Boot LS startup time from start to initialized: 20582ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.929
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.pZOTpanIisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.930
+!MESSAGE subscribing to classpath changes: sts4.classpath.pZOTpanI isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.935
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.938
+!MESSAGE subsribers = {sts4.classpath.pZOTpanI=Send Classpath Notifications(804)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.939
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.947
+!MESSAGE project 알고리즘JAVA ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.948
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.949
+!MESSAGE Preparing classpath changed notification 알고리즘JAVA
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.950
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.pZOTpanI => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.950
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.962
+!MESSAGE classpath=19 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.967
+!MESSAGE buffering callback sts4.classpath.pZOTpanI 알고리즘JAVA false 19
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:12.968
+!MESSAGE executing callback sts4.classpath.pZOTpanI 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:45:13.010
+!MESSAGE executing callback sts4.classpath.pZOTpanI SUCCESS [done]
+
+!ENTRY org.eclipse.jface.text 2 0 2020-02-01 21:46:01.069
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:48:17.372
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.pZOTpanI
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:48:17.373
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.pZOTpanI
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:48:17.374
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-02-01 21:48:17.375
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.pZOTpanI => OK
