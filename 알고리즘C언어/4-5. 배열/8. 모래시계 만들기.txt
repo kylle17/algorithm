@@ -1,0 +1,82 @@
+문제)
+    
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답1) 내가 적은 답. 
+#include<stdio.h>
+
+int main(void) {
+	int x;
+	scanf_s("%d", &x);
+	int a[10][10] = { 0 };
+	int n = 0, s = 0, e = x , m=x/2;
+
+	for (int i = 0; i < x; i++) {
+		for (int j = s; j < e; j++) {
+			n++;
+			a[i][j] = n;
+		}
+		if (i < m) {
+			s++;
+			e--;
+		}
+		else {
+			s--;
+			e++;
+		}
+	}
+
+	for (int i = 0; i <x ; i++) {
+		for (int j = 0; j <x ; j++) {
+			printf("%3d", a[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+답2) 책 답
+#include<stdio.h>
+
+int main(void) {
+	int x, m, L, i, j, k;
+	x = 1;
+	scanf_s("%d", &x);
+	int a[10][10];
+	for (i = 0; i < x; i++) {
+		for (j = 0; j < x; j++) {
+			a[i][j] = 0;
+		}
+	}
+
+	k = 0;
+	L = x;
+	m = x / 2;
+
+	for (i = 0; i <= m; i++) {
+		L--;
+		for (j = i; j <= L; j++) {
+			k++;
+			a[i][j] = k;
+		}
+	}
+	for (i = m + 1; i <= x - 1; i++) {
+		L--;
+		for (j = L; j <= i; j++) {
+			k++;
+			a[i][j] = k;
+		}
+	}
+
+	for (int y = 0; y < x; y++) {
+		for (int z = 0; z < x; z++) {
+			printf("%3d", a[y][z]);
+		}
+		printf("\n");
+	}
+
+}
