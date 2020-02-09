@@ -1,7 +1,5 @@
 package CB_버블정렬;
 
-import java.util.Scanner;
-
 public class C_버블정렬_좌우번갈아정렬 {
 	public static void main(String[] args) {
 		

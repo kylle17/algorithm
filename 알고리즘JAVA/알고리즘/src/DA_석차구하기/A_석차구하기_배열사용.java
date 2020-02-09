@@ -19,7 +19,7 @@ public class A_석차구하기_배열사용 {
 		for (int i = 0; i < 10; i++) {
 			z[i] = sc.nextInt();
 		}		
-		
+		sc.close();
 	
 		long startTime = System.currentTimeMillis(); 		
 		for(int repeat=0 ; repeat<100000000 ; repeat++) {	

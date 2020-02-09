@@ -40,6 +40,7 @@ public class A_스택 {
 			if (j == 1) {
 				System.out.println("삽입할 숫자를 입력하세요.:");
 				k = sc.nextInt(); 
+				sc.close();
 				i = push(k);
 				if (i == -1) break;
 			}

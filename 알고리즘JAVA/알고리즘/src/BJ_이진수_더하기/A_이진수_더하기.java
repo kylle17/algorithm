@@ -23,7 +23,7 @@ public class A_이진수_더하기 {
 		for (int i = 0; i < 10; i++) {
 			y[i] = sc.nextInt();
 		}
-		
+		sc.close();
 	
 		long startTime = System.currentTimeMillis(); 		
 		for(int repeat=0 ; repeat<100000000 ; repeat++) {	
@@ -57,7 +57,7 @@ public class A_이진수_더하기 {
 		
 		
 		//답2번  = 책답
-		int i, z, c, j;
+		int z, c, j;
 		int a[] = new int[10];
 		z = 0; c = 0; j = 9;
 		

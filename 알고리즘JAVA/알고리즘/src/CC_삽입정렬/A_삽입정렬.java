@@ -19,6 +19,7 @@ public class A_»ğÀÔÁ¤·Ä {
 		for (int i = 0; i < 10; i++) {
 			z[i] = sc.nextInt();
 		}		
+		sc.close();
 		
 	
 		long startTime = System.currentTimeMillis(); 		

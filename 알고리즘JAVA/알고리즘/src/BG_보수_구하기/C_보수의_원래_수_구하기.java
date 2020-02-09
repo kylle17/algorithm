@@ -17,7 +17,7 @@ public class C_보수의_원래_수_구하기 {
 		for (int i = 0; i < 5; i++) {
 			a[i] = sc.nextInt();
 		}
-		
+		sc.close();
 	
 		long startTime = System.currentTimeMillis(); 		
 		for(int repeat=0 ; repeat<100000000 ; repeat++) {	

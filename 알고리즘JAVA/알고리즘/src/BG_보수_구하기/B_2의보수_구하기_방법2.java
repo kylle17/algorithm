@@ -1,7 +1,5 @@
 package BG_보수_구하기;
 
-import java.util.Scanner;
-
 public class B_2의보수_구하기_방법2 {
 	public static void main(String[] args) {
 		

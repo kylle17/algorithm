@@ -19,6 +19,7 @@ public class A_이분검색_1차원배열 {
 
 		Scanner sc = new Scanner(System.in);
 		a = sc.nextInt();
+		sc.close();
 		
 	
 		long startTime = System.currentTimeMillis(); 		

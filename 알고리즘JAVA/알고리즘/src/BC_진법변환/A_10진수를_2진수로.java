@@ -15,6 +15,7 @@ public class A_10진수를_2진수로 {
 		int n, cnt, mok, nmg;	int result[]= new int[100];
 		Scanner sc = new Scanner(System.in);
 		n = sc.nextInt();
+		sc.close();
 		cnt = -1;
 	
 		long startTime = System.currentTimeMillis(); 		

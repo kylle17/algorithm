@@ -19,7 +19,7 @@ public class A_1의보수_2의보수_구하기 {
 		for (int i = 0; i < 5; i++) {
 			a[i] = sc.nextInt();
 		}
-		
+		sc.close();
 	
 		long startTime = System.currentTimeMillis(); 		
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {	

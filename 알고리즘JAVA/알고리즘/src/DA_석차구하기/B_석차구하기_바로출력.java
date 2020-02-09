@@ -15,7 +15,7 @@ public class B_석차구하기_바로출력 {
 		//답1번  = 내가 푼것
 		Scanner sc = new Scanner(System.in);
 		int kor[] = new int[10], math[] = new int[10], total[] = new int[10];;
-		int i , j , k , rank;
+		int i , j ,  rank=0;
 
 		for (i = 0; i < 10; i++) {
 			kor[i] = sc.nextInt();
@@ -27,6 +27,7 @@ public class B_석차구하기_바로출력 {
 		for (i = 0; i < 10; i++) {
 			total[i] = kor[i] + math[i];
 		}
+		sc.close();
 		
 	
 		long startTime = System.currentTimeMillis(); 		
@@ -48,7 +49,7 @@ public class B_석차구하기_바로출력 {
 		long endTime = System.currentTimeMillis(); 
 		long runtime = (endTime - startTime); 
 		System.out.println("소요시간(m) : "+runtime/1000.0);
-
+		System.out.println(rank);
 		
 		
 		
@@ -79,7 +80,7 @@ public class B_석차구하기_바로출력 {
 		endTime = System.currentTimeMillis(); 
 		runtime = (endTime - startTime); 
 		System.out.println("\n소요시간(m) : "+runtime/1000.0);
-
+		System.out.println(r);
 		
 	}
 }

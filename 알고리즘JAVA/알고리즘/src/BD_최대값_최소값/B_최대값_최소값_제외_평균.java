@@ -18,6 +18,7 @@ public class B_최대값_최소값_제외_평균 {
 			System.out.println("숫자를 입력하세요");
 			a[i] = sc.nextInt();
 		}
+		sc.close();
 		max = a[0];
 		min = a[0];
 		result = 0;

@@ -10,7 +10,8 @@ public class H_모래시계_만들기 {
 		x = sc.nextInt();
 		int a[][] = new int[x][x];
 		int n = 0, s = 0, e = x , m=x/2;
-
+		sc.close();
+		
 		for (int i = 0; i < x; i++) {
 			for (int j = s; j < e; j++) {
 				n++;

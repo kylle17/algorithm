@@ -1,7 +1,5 @@
 package DC_병합;
 
-import java.util.Scanner;
-
 public class A_병합 {
 	
 	static int i, j, k;  //책답용 변수;

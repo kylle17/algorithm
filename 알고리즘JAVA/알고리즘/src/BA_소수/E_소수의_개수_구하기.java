@@ -1,7 +1,5 @@
 package BA_소수;
 
-import java.util.Scanner;
-
 public class E_소수의_개수_구하기 {
 public static void main(String[] args) {
 		

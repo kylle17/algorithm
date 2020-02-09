@@ -17,6 +17,7 @@ public class A_그레이코드 {
 		for (int i = 0; i < 5; i++) {
 			a[i] = sc.nextInt();
 		}
+		sc.close();
 		
 	
 		long startTime = System.currentTimeMillis(); 		

@@ -22,6 +22,7 @@ public class A_7에_가까운_수 {
 		for (int i = 0; i < 10; i++) {
 			a[i] = sc.nextInt();
 		}
+		sc.close();
 		result = 0;
 		num = 7;
 		gap = 10;
@@ -56,7 +57,7 @@ public class A_7에_가까운_수 {
 		
 		
 		//답2번  = 책답
-		int i, j, k, L, m;
+		int j, k, L, m;
 		m = 0;
 		
 		

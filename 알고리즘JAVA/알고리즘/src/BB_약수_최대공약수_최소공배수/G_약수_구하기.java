@@ -11,11 +11,11 @@ public class G_약수_구하기 {
 		
 				
 		//답1번  = 내가 푼것
-		String resultText = null;
+
 		int n;	int cnt=0;  int result[]= new int[100];
 		Scanner sc = new Scanner(System.in);
 		n = sc.nextInt();
-
+		sc.close();
 	
 		long startTime = System.currentTimeMillis(); 		
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {	

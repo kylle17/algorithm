@@ -15,6 +15,7 @@ public class H_소인수_분해하기 {
 		Scanner sc = new Scanner(System.in);
 		n = sc.nextInt();
 		cnt = -1;
+		sc.close();
 	
 		long startTime = System.currentTimeMillis(); 		
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {	

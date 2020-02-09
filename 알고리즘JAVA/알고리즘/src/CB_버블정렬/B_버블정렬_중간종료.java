@@ -22,6 +22,7 @@ public class B_버블정렬_중간종료 {
 		for (int i = 0; i < 10; i++) {
 			n[i] = sc.nextInt();
 		}
+		sc.close();
 		
 	
 		long startTime = System.currentTimeMillis(); 		

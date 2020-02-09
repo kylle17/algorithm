@@ -12,11 +12,12 @@ public class A_최대값_최소값 {
 				
 		//답1번  = 내가 푼것
 		Scanner sc = new Scanner(System.in);
-		int n[] = new int[10]; int max, min, tmp;		
+		int n[] = new int[10]; int max, min;		
 		for (int i = 0; i < 10; i++) {
 			System.out.println("숫자를 입력하세요");
 			n[i] = sc.nextInt();
 		}
+		sc.close();
 		max = n[0];
 		min = n[0];
 

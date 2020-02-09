@@ -1,7 +1,5 @@
 package DE_배열;
 
-import java.util.Scanner;
-
 public class F_ㄹ자로_채우기 {
 	public static void main(String[] args) {
 		

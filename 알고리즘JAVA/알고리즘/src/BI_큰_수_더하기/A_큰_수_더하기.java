@@ -26,6 +26,7 @@ public class A_큰_수_더하기 {
 				break;
 			}
 		}
+		sc.close();
 		
 	
 		long startTime = System.currentTimeMillis(); 		

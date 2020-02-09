@@ -18,6 +18,7 @@ public class B_10진수를_여러진수로 {
 		Scanner sc = new Scanner(System.in);
 		n = sc.nextInt();
 		b = sc.nextInt();
+		sc.close();
 		e = 1;
 		mok = n;
 		cnt = -1;
@@ -59,7 +60,6 @@ public class B_10진수를_여러진수로 {
 		//답2번  = 책답
 		
 		int c, d, f;
-		char a[] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};	
 		c = n;
 		
 		startTime = System.currentTimeMillis(); 

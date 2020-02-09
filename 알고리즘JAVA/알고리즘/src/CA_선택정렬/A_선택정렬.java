@@ -16,7 +16,7 @@ public class A_선택정렬 {
 		for (int i = 0; i < 10; i++) {
 			n[i] = sc.nextInt();
 		}
-		
+		sc.close();
 	
 		long startTime = System.currentTimeMillis(); 		
 		for(int repeat=0 ; repeat<100000000 ; repeat++) {	
@@ -52,7 +52,7 @@ public class A_선택정렬 {
 		
 		
 		//답2번  = 책답
-		int m, i, j, k, x;
+		int i, j, k, x;
 		int data[] = new int[10];
 		
 		

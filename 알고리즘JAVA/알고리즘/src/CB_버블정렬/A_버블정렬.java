@@ -16,6 +16,7 @@ public class A_버블정렬 {
 		for (int i = 0; i < 10; i++) {
 			n[i] = sc.nextInt();
 		}
+		sc.close();
 		
 	
 		long startTime = System.currentTimeMillis(); 		

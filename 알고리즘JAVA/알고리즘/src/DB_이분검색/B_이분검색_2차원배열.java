@@ -22,7 +22,7 @@ public class B_이분검색_2차원배열 {
 
 		Scanner sc = new Scanner(System.in);
 		a = sc.nextInt();
-		
+		sc.close();
 	
 		long startTime = System.currentTimeMillis(); 		
 		for(int repeat=0 ; repeat<100000000 ; repeat++) {	

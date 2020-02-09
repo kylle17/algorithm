@@ -1,7 +1,5 @@
 package BE_배수_합계;
 
-import java.util.Scanner;
-
 public class A_5의_배수_개수와_합계 {
 	public static void main(String[] args) {
 		

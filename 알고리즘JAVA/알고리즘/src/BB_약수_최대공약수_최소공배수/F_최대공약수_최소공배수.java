@@ -16,7 +16,7 @@ public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		a = sc.nextInt();
 		b = sc.nextInt();
-
+		sc.close();
 	
 		long startTime = System.currentTimeMillis(); 		
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {	

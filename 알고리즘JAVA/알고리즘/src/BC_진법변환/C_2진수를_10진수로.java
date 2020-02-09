@@ -17,6 +17,7 @@ public class C_2진수를_10진수로 {
 		String n = null; int b; double f, result = 0;
 		Scanner sc = new Scanner(System.in);
 		n = sc.nextLine();
+		sc.close();
 	
 		long startTime = System.currentTimeMillis(); 		
 		for(int repeat=0 ; repeat<1000000 ; repeat++) {	
