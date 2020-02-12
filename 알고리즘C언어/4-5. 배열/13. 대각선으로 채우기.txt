@@ -45,31 +45,22 @@ int main(void) {
 #include<stdio.h>
 
 int main(void) {
-	int k, c, i, j, f, n;
+	int i, j, k;
 	int a[5][5] = { 0 };
+	int L = 0;
 
-	k = 0;
-	c = 1;
-	i = 0;
-	j = -1;
-
-	f = 5;
-	while (1) {
-		for (n = 1; n <= f; n++) {
-			k++;
-			j += c;
-			a[i][j] = k;
+	for (i = 0; i <= 8; i++) {
+		for (j = 0; j <= 4; j++) {
+			k = i - j;
+			if (k < 0) {
+				continue;
+			}
+			if (k > 4) {
+				continue;
+			}
+			L++;
+			a[j][k] = L;
 		}
-		f--;
-		if (f <= 0) {
-			break;
-		}
-		for (n = 1; n <= f; n++) {
-			k++;
-			i += c;
-			a[i][j] = k;
-		}
-		c *= -1;
 	}
 	for (int x = 0; x <= 4; x++) {
 		for (int y = 0; y <= 4; y++) {
